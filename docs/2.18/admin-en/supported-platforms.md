@@ -1,1 +1,3 @@
---8<-- "latest/admin-en/supported-platforms.md"
+---
+template: overrides/supported-platforms.html
+---

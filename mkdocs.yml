@@ -99,7 +99,7 @@ nav:
     - Administrator Guide:
       - Introduction: admin-en/admin-intro-en.md
       - Installation:
-        - Supported Platforms: admin-en/supported-platforms.md
+        - Wallarm WAF deployment options: admin-en/supported-platforms.md
         - NGINX:
           - Installation Options Overview: admin-en/installation-nginx-overview.md
           - Installing as a Dynamic Module for NGINX stable: waf-installation/nginx/dynamic-module.md
@@ -133,8 +133,11 @@ nav:
               - Creating a Filter Node Instance Template: admin-en/installation-guides/google-cloud/creating-instance-template.md
               - Creating a Managed Instance Group with Enabled Auto Scaling: admin-en/installation-guides/google-cloud/creating-autoscaling-group.md
               - Setting up Incoming Request Balancing: admin-en/installation-guides/google-cloud/load-balancing-guide.md
+            - Deploying WAF on the cloud platform from the Docker container: waf-installation/cloud-platforms/from-docker-container.md
+            - Deploying WAF on the cloud platform from source packages: waf-installation/cloud-platforms/from-nginx-packages.md
           - Installing on Yandex.Cloud: admin-en/installation-guides/install-in-yandex-cloud.md
         - Installing on the Kong Platform: admin-en/installation-kong-en.md
+        - Installing with OpenResty: admin-en/installation-openresty.md
         - Running Docker Envoy‑based image: admin-en/installation-guides/envoy/envoy-docker.md
         - Separate postanalytics module installation: admin-en/installation-postanalytics-en.md
         - Checking the Filter Node Operation: admin-en/installation-check-operation-en.md
