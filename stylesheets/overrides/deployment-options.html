@@ -1,81 +1,4 @@
-# Wallarm WAF deployment options
-
-## Web servers
-
-<div class="navigation" style="grid-template-columns: repeat(3, 1fr);">
-
-<div id="deployOptionsDiv" class="navigation-card platform-card">
-    <div type="button" id="nginx" class="platform-card-button" onClick="platformClicked(event, 'nginx')">
-        <img class="platform-icon" src="../../images/platform-icons/nginx.svg">
-        <h3>NGINX stable
-            <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
-            </svg>                    
-        </h3>
-        <p>Select the platform to deploy the WAF node compatible with NGINX stable...</p>
-        <div id="nginxId" class="options-list" style="display: none;">
-            <a href="#cloud-platforms" onClick="noAction(event)">Cloud platform</a>
-            <a href="#containerized-deployments" onClick="noAction(event)">Containerized deployment</a>
-            <a href="#operating-systems" onClick="noAction(event)">Operating system</a>
-        </div>
-    </div>
-</div> 
-
-<div id="deployOptionsDiv" class="navigation-card platform-card">
-    <div type="button" id="nginxPlus" class="platform-card-button" onClick="platformClicked(event, 'nginxPlus')">
-        <img class="platform-icon" src="../../images/platform-icons/nginx.svg">
-        <h3>NGINX Plus
-            <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
-            </svg>                    
-        </h3>
-        <p>Select the platform to deploy the WAF node compatible with NGINX Plus...</p>
-        <div id="nginxPlusId" class="options-list" style="display: none;">
-            <a href="#cloud-platforms" onClick="noAction(event)">Cloud platform</a>
-            <a href="#operating-systems" onClick="noAction(event)">Operating system</a>
-        </div>    
-    </div>
-</div> 
-
-<div id="deployOptionsDiv" class="navigation-card platform-card">
-    <div type="button" id="kong" class="platform-card-button" onClick="platformClicked(event, 'kong')">
-        <img class="platform-icon" src="../../images/platform-icons/kong.svg">
-        <h3>Kong
-            <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
-            </svg>                    
-        </h3>
-        <p>Select the platform to deploy the WAF node compatible with Kong...</p>
-        <div id="kongId" class="options-list" style="display: none;">
-            <a href="#cloud-platforms" onClick="noAction(event)">Cloud platform</a>
-            <a href="#operating-systems" onClick="noAction(event)">Operating system</a>
-        </div>    
-    </div>
-</div> 
-
-<!-- <div id="deployOptionsDiv" class="navigation-card platform-card">
-    <div type="button" id="envoy" class="platform-card-button" onClick="platformClicked(event, 'envoy')">
-        <img class="platform-icon" src="../../images/platform-icons/envoy.svg">
-        <h3>Envoy
-            <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
-            </svg>                    
-        </h3>
-        <p>Deploy the Envoy-based Docker container with the WAF node modules</p>
-        <div id="envoyId" class="options-list" style="display: none;">
-            <a href="../../admin-en/installation-guides/envoy/envoy-docker/" onClick="noAction(event)">Docker container (Envoy)</a>
-        </div>
-    </div>
-</div>  -->
-
-<a href="../../admin-en/installation-docker-en/" class="navigation-card platform-card" style="padding: 24px 32px; font-size: 14px;">
-        <img class="platform-icon" src="../../images/platform-icons/envoy.svg">
-        <h3>Envoy</h3>
-        <p>Deploy the Envoy-based Docker container with the WAF node modules</p>
-    </a>
-
-</div>
-
+# Supported platforms
 
 ## Cloud platforms
 
@@ -205,7 +128,15 @@
         <h3>K8s sidecar container (NGINX)</h3>
         <p>Run the NGINX-based WAF node as the K8s sidecar container</p>
     </a>
+
+    <a href="../../admin-en/installation-guides/envoy/envoy-docker/" class="navigation-card platform-card" style="padding: 24px 32px; font-size: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" style="height: 64px;" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 32 32"><defs><clipPath id="A"><path d="M76 2v46H54v23H35.58l-.206 2c-1.15 12.53 1.036 24.088 6.063 33.97l1.688 3.03c1 1.817 2.2 3.523 3.438 5.188s1.686 2.583 2.47 3.688C62.32 133.8 82.13 141 105 141c50.648 0 93.633-22.438 112.656-72.844C231.153 69.54 244.1 66.08 250 54.563c-9.4-5.424-21.478-3.685-28.437-.187L240 2l-72 46h-23V2z"/></clipPath></defs><g transform="matrix(.679423 0 0 .679423 -2.086149 13.781817)"><path d="M30.305-3.553h4.222V.763h2.135a9.26 9.26 0 0 0 2.934-.492c.46-.156.974-.372 1.426-.644-.596-.778-.9-1.76-1-2.73-.122-1.317.144-3.032 1.036-4.063l.444-.513.53.425c1.332 1.07 2.452 2.565 2.65 4.27 1.603-.472 3.486-.36 4.9.456l.58.335-.305.596c-1.187 2.33-3.687 3.053-6.13 2.925-3.656 9.105-11.615 13.416-21.265 13.416-4.986 0-9.56-1.864-12.164-6.287-.153-.275-.283-.562-.422-.844-.88-1.947-1.173-4.08-.975-6.2l.06-.638h3.6V-3.55h4.222v-4.222h8.445v-4.222h5.067v8.445" fill="#394d54"/><g transform="matrix(.184659 0 0 .184659 3.070472 -11.997864)" clip-path="url(#A)"><g id="B"><g id="C" transform="translate(0 -22.866)"><path d="M123.86 3.8h19.818v19.817H123.86z" fill="#00acd3"/><path d="M123.86 26.676h19.818v19.818H123.86z" fill="#20c2ef"/><path id="D" d="M126.292 21.977V5.46m2.972 16.516V5.46m3.002 16.516V5.46m3.003 16.516V5.46m3.003 16.516V5.46m2.97 16.516V5.46" stroke="#394d54" stroke-width="1.56"/><use xlink:href="#D" y="22.866"/></g><use xlink:href="#C" transform="matrix(1 0 0 -1 22.866 4.572651)"/></g><use xlink:href="#B" x="-91.464" y="45.732"/><use xlink:href="#B" x="-45.732" y="45.732"/><use xlink:href="#B" y="45.732"/><path d="M221.57 54.38c1.533-11.915-7.384-21.275-12.914-25.718-6.373 7.368-7.363 26.678 2.635 34.807-5.58 4.956-17.337 9.448-29.376 9.448H34C32.83 85.484 34 146 34 146h217l-.987-91.424c-9.4-5.424-21.484-3.694-28.443-.197" fill="#17b5eb"/><path d="M34 89v57h217V89" fill-opacity=".17"/><path d="M111.237 140.9c-13.54-6.425-20.972-15.16-25.107-24.694L45 118l21 28 45.237-5.1" fill="#d4edf1"/><path d="M222.5 53.938v.03c-20.86 26.9-50.783 50.38-82.906 62.72-28.655 11.008-53.638 11.06-70.875 2.22-1.856-1.048-3.676-2.212-5.5-3.312-12.637-8.832-19.754-23.44-19.156-42.687H34V146h217V50h-25z" fill-opacity=".085"/></g><path d="M11.496 9.613c2.616.143 5.407.17 7.842-.594" fill="none" stroke="#394d54" stroke-width=".628" stroke-linecap="round"/><path d="M21.937 7.753a1.01 1.01 0 0 1-1.009 1.009 1.01 1.01 0 0 1-1.01-1.009 1.01 1.01 0 0 1 1.01-1.01 1.01 1.01 0 0 1 1.009 1.01z" fill="#d4edf1"/><path d="M21.2 7.08c-.088.05-.148.146-.148.256 0 .163.132.295.295.295.112 0 .2-.062.26-.154a.73.73 0 0 1 .055.277c0 .4-.324.723-.723.723s-.723-.324-.723-.723.324-.723.723-.723a.72.72 0 0 1 .262.049zM3.07 4.65h46.964c-1.023-.26-3.235-.6-2.87-1.95-1.86 2.152-6.344 1.5-7.475.448-1.26 1.828-8.597 1.133-9.108-.3-1.58 1.854-6.475 1.854-8.055 0-.512 1.424-7.848 2.12-9.1.3C12.284 4.2 7.8 4.853 5.94 2.7c.365 1.34-1.848 1.7-2.87 1.95" fill="#394d54"/></g></svg>
+        <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath id="a"><path d="m22.9 13.6h271.8v296.2h-271.8z"/></clipPath><g transform="matrix(.283424 0 0 .283424 -13.064191 3.213972)"><path clip-path="url(#a)" d="m116.7 107.6-14.3-8.9.3 13.6 14.3 8.9zm20.6 47.6-.3-13.3-12.5-7.8c-.2-.1-.4-.3-.5-.4l.3 13.4zm-44.7 17.9-32.7-20.3-.8-34 16-6.9-.3-13.6-25.6 11c-2 .9-3.2 2.7-3.1 4.8l1 40.8c0 2.1 1.3 4.2 3.3 5.4l39.2 24.3c1.8 1.1 4 1.4 5.9.9.2-.1.4-.1.6-.2l24.1-10.4-13.1-8.1z" fill="#b31aab"/><path clip-path="url(#a)" d="m198.3 97.9c-.1-2.4-1.5-4.9-3.9-6.3l-47.6-29.5-1.5.6.3 14.3 37.7 23.4.9 38.2 14.4 8.9.8-.3zm-57 67.1-44.3-27.4-1.1-46 20.2-8.7-.4-15.9-31.3 13.5c-2.3 1-3.7 3.1-3.6 5.6l1.3 54c0 2.5 1.5 4.9 3.9 6.3l51.9 32.2c2.1 1.3 4.7 1.7 6.9 1 .2-.1.4-.2.6-.2l30.6-13.2-15.2-9.4z" fill="#d163ce"/><path clip-path="url(#a)" d="m265.8 60.1-66.5-41.2c-2.5-1.5-5.4-1.9-7.9-1.1-.2.1-.5.2-.7.3l-64.9 28c-2.6 1.1-4.2 3.5-4.1 6.4l1.6 69.2c.1 2.8 1.8 5.6 4.5 7.2l66.5 41.2c2.4 1.5 5.4 1.9 7.9 1.1.2-.1.5-.2.7-.3l64.9-28c2.6-1.1 4.2-3.6 4.1-6.4l-1.6-69.2c-.1-2.8-1.8-5.5-4.5-7.2m-67.6 94.5-57.8-35.8-1.4-60.1 56.4-24.3 57.8 35.8 1.4 60.1z" fill="#e13eaf"/></g></svg>
+        <h3>Docker Envoy‑based image</h3>
+    </a>
 </div>
+
+## Web servers
 
 ## Operating systems
 
@@ -214,17 +145,16 @@
     <div id="deployOptionsDiv" class="navigation-card platform-card">
         <div type="button" id="debian9" class="platform-card-button" onClick="platformClicked(event, 'debian9')">
         <img class="platform-icon" src="../../images/platform-icons/debian.svg">
-            <h3>Debian 9.x
+            <h3>Debian 9.x (stretch)
                 <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on Debian 9.x (stretch) as the module for...</p>
         <div id="debian9Id" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable</a>
-        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus</a>
-        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">NGINX from Debian repo</a>
-        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong</a>
+        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable-based packs</a>
+        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus-based packs</a>
+        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">Packs for NGINX from Debian repo</a>
+        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong-based packs</a>
     </div>
         </div>
     </div> 
@@ -232,14 +162,13 @@
     <div id="deployOptionsDiv" class="navigation-card platform-card">
         <div type="button" id="debian9back" onClick="platformClicked(event, 'debian9back')" class="platform-card-button">
             <img class="platform-icon" src="../../images/platform-icons/debian.svg">
-            <h3>Debian 9.x
+            <h3>Debian 9.x (stretch-backports)
                 <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on Debian 9.x (stretch-backports) as the module for...</p>
                     <div id="debian9backId" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">NGINX from Debian repo</a>
+        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">Packs for NGINX from Debian repo</a>
     </div>
         </div>
 
@@ -248,16 +177,15 @@
     <div id="deployOptionsDiv" class="navigation-card platform-card">
         <div type="button" id="debian10" onClick="platformClicked(event, 'debian10')" class="platform-card-button">
             <img class="platform-icon" src="../../images/platform-icons/debian.svg">
-            <h3>Debian 10.x
+            <h3>Debian 10.x (buster)
                 <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on Debian 10.x (buster) as the module for...</p>
                     <div id="debian10Id" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable</a>
-        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus</a>
-        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">NGINX from Debian repo</a>
+        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable-based packs</a>
+        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus-based packs</a>
+        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">Packs for NGINX from Debian repo</a>
     </div>
         </div>
 
@@ -265,20 +193,19 @@
 
 </div>
 
-<div class="navigation" style="grid-template-columns: repeat(3, 1fr); padding-top: 16px;">
+<div class="navigation" style="grid-template-columns: repeat(3, 1fr);">
     <div id="deployOptionsDiv" class="navigation-card platform-card">
         <div type="button" id="ubuntu16" onClick="platformClicked(event, 'ubuntu16')" class="platform-card-button">
             <img class="platform-icon" src="../../images/platform-icons/ubuntu.svg">
-            <h3>Ubuntu 16.04
+            <h3>Ubuntu 16.04 LTS (xenial)
                 <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on Ubuntu 16.04 LTS (xenial) as the module for...</p>
                     <div id="ubuntu16Id" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable</a>
-        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus</a>
-        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong</a>
+        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable-based packs</a>
+        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus-based packs</a>
+        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong-based packs</a>
     </div>
         </div>
 
@@ -287,23 +214,22 @@
     <div id="deployOptionsDiv" class="navigation-card platform-card">
         <div type="button" id="ubuntu18" onClick="platformClicked(event, 'ubuntu18')" class="platform-card-button">
             <img class="platform-icon" src="../../images/platform-icons/ubuntu.svg">
-            <h3>Ubuntu 18.04
+            <h3>Ubuntu 18.04 LTS (bionic)
                 <svg class="options-drop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on Ubuntu 18.04 LTS (bionic) as the module for...</p>
                     <div id="ubuntu18Id" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable</a>
-        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus</a>
-        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong</a>
+        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable-based packs</a>
+        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus-based packs</a>
+        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong-based packs</a>
     </div>
         </div>
 
     </div> 
 </div>
 
-<div class="navigation" style="grid-template-columns: repeat(3, 1fr); padding-top: 16px;">
+<div class="navigation" style="grid-template-columns: repeat(3, 1fr);">
     <div id="deployOptionsDiv" class="navigation-card platform-card">
         <div type="button" id="centos7" onClick="platformClicked(event, 'centos7')" class="platform-card-button">
             <img class="platform-icon" src="../../images/platform-icons/centos.svg">
@@ -312,12 +238,11 @@
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on CentOS 7.x as the module for...</p>
                     <div id="centos7Id" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable</a>
-        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus</a>
-        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">NGINX from CentOS repo</a>
-        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong</a>
+        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable-based packs</a>
+        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus-based packs</a>
+        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">Packs for NGINX from CentOS repo</a>
+        <a href="../../admin-en/installation-kong-en/" onClick="noAction(event)">Kong-based packs</a>
     </div>
         </div>
 
@@ -331,18 +256,17 @@
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on CentOS 8.x as the module for...</p>
                     <div id="centos8Id" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable</a>
-        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus</a>
-        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">NGINX from CentOS repo</a>
+        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable-based packs</a>
+        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus-based packs</a>
+        <a href="../../waf-installation/nginx/dynamic-module-from-distr/" onClick="noAction(event)">Packs for NGINX from CentOS repo</a>
     </div>
         </div>
 
     </div> 
 </div>
 
-<div class="navigation" style="grid-template-columns: repeat(3, 1fr); padding-top: 16px;">
+<div class="navigation" style="grid-template-columns: repeat(3, 1fr);">
     <div id="deployOptionsDiv" class="navigation-card platform-card">
         <div type="button" id="alinux2" onClick="platformClicked(event, 'alinux2')" class="platform-card-button">
             <img class="platform-icon" src="../../images/platform-icons/amazon-linux.svg">
@@ -351,12 +275,12 @@
                     <path d="M10.5 8L14.5 12L10.5 16" stroke="#959DAC" stroke-width="2" stroke-linecap="square"/>
                 </svg>
             </h3>
-            <p>Install the WAF node on Amazon Linux 2 as the module for...</p>
                     <div id="alinux2Id" class="options-list" style="display: none;">
-        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable</a>
-        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus</a>
+        <a href="../../waf-installation/nginx/dynamic-module/" onClick="noAction(event)">NGINX stable-based packs</a>
+        <a href="../../waf-installation/nginx-plus/" onClick="noAction(event)">NGINX Plus-based packs</a>
     </div>
         </div>
 
     </div> 
 </div>
+</div> 
